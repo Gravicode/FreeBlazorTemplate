@@ -3,7 +3,11 @@
     * Copyright 2013-2021 Start Bootstrap
     * Licensed under SEE_LICENSE (https://github.com/StartBootstrap/sb-admin-pro/blob/master/LICENSE)
     */
-    window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', event => {
+    LoadFeather();
+});
+
+function LoadFeather() {
     // Activate feather
     feather.replace();
 
@@ -82,4 +86,4 @@
         }
         targetAnchor.classList.add('active');
     });
-});
+}

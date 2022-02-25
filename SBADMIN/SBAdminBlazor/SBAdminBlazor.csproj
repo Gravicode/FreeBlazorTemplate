@@ -14,8 +14,4 @@
     <None Include="wwwroot\css\open-iconic\README.md" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Accounts\" />
-  </ItemGroup>
-
 </Project>

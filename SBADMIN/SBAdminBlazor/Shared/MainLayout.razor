@@ -1,26 +1,28 @@
 ﻿@inherits LayoutComponentBase
 
 <PageTitle>SB Admin Blazor</PageTitle>
-<TopNavBar></TopNavBar>
-<div id="layoutSidenav">
-    <div id="layoutSidenav_nav">
-       <LeftMenu></LeftMenu>
-    </div>
-    <div id="layoutSidenav_content">
-        <main>
-            @Body
-        </main>
-        <footer class="footer-admin mt-auto footer-light">
-            <div class="container-xl px-4">
-                <div class="row">
-                    <div class="col-md-6 small">Copyright &copy; @(AppConfig.AppName) @(DateTime.Now.Year)</div>
-                    <div class="col-md-6 text-md-end small">
-                        <a href="#!">Privacy Policy</a>
-                        &middot;
-                        <a href="#!">Terms &amp; Conditions</a>
+<div class="nav-fixed">
+    <TopNavBar></TopNavBar>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <LeftMenu></LeftMenu>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                @Body
+            </main>
+            <footer class="footer-admin mt-auto footer-light">
+                <div class="container-xl px-4">
+                    <div class="row">
+                        <div class="col-md-6 small">Copyright &copy; @(AppConfig.AppName) @(DateTime.Now.Year)</div>
+                        <div class="col-md-6 text-md-end small">
+                            <a href="#!">Privacy Policy</a>
+                            &middot;
+                            <a href="#!">Terms &amp; Conditions</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 </div>

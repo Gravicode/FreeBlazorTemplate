@@ -1,0 +1,103 @@
+﻿@page "/kb/knowledge-base-category"
+@inject IJSRuntime JS
+
+<PageTitle>Knowledge Base Category</PageTitle> 
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary mb-4">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="life-buoy"></i></div>
+                                            Knowledge Base
+                                        </h1>
+                                        <div class="page-header-subtitle">What are you looking for? Our knowledge base is here to help.</div>
+                                    </div>
+                                </div>
+                                <div class="page-header-search mt-4">
+                                    <div class="input-group input-group-joined">
+                                        <input class="form-control" type="text" placeholder="Search..." aria-label="Search" autofocus />
+                                        <span class="input-group-text"><i data-feather="search"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4">
+                        <!-- Knowledge base category-->
+                        <h2 class="mb-0 mt-5">Category Name</h2>
+                        <hr class="mt-2 mb-4" />
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">How to update your billing information</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">Integrating with the API</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">Setting up new accounts within our platform</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">Accessing and editing order details</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">Installation instructions for Windows 10 users</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Knowledge base item-->
+                        <a class="card card-icon lift lift-sm mb-4" href="/kb/knowledge-base-article">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="h5 card-title mb-0">Installation instructions for Mac OSX users</div>
+                                    <i class="flex-shrink-0 ms-4" data-feather="chevron-right"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- knowledge base rating-->
+                        <div class="text-center mt-5">
+                            <h4 class="mb-3">Was this page helpful?</h4>
+                            <div class="mb-3">
+                                <button class="btn btn-primary mx-2 px-3" role="button">
+                                    <i class="me-2" data-feather="thumbs-up"></i>
+                                    Yes
+                                </button>
+                                <button class="btn btn-primary mx-2 px-3" role="button">
+                                    <i class="me-2" data-feather="thumbs-down"></i>
+                                    No
+                                </button>
+                            </div>
+                            <div class="text-small text-muted"><em>29 people found this page helpful so far!</em></div>
+                        </div>
+                    </div>
+@code {
+
+}

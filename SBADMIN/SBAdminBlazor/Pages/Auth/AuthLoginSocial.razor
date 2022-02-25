@@ -1,0 +1,59 @@
+﻿@layout NoAuthLayout
+@page "/auth/auth-login-social"
+@inject IJSRuntime JS
+
+<PageTitle>Auth Login Social</PageTitle>
+ 
+<div class="container-xl px-4">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
+                                <!-- Social login form-->
+                                <div class="card my-5">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="h3 fw-light mb-3">Sign In</div>
+                                        <!-- Social login links-->
+                                        <a class="btn btn-icon btn-facebook mx-1" href="#!"><i class="fab fa-facebook-f fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-github mx-1" href="#!"><i class="fab fa-github fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-google mx-1" href="#!"><i class="fab fa-google fa-fw fa-sm"></i></a>
+                                        <a class="btn btn-icon btn-twitter mx-1" href="#!"><i class="fab fa-twitter fa-fw fa-sm text-white"></i></a>
+                                    </div>
+                                    <hr class="my-0" />
+                                    <div class="card-body p-5">
+                                        <!-- Login form-->
+                                        <form>
+                                            <!-- Form Group (email address)-->
+                                            <div class="mb-3">
+                                                <label class="text-gray-600 small" for="emailExample">Email address</label>
+                                                <input class="form-control form-control-solid" type="text" placeholder="" aria-label="Email Address" aria-describedby="emailExample" />
+                                            </div>
+                                            <!-- Form Group (password)-->
+                                            <div class="mb-3">
+                                                <label class="text-gray-600 small" for="passwordExample">Password</label>
+                                                <input class="form-control form-control-solid" type="password" placeholder="" aria-label="Password" aria-describedby="passwordExample" />
+                                            </div>
+                                            <!-- Form Group (forgot password link)-->
+                                            <div class="mb-3"><a class="small" href="/auth/auth-password-social">Forgot your password?</a></div>
+                                            <!-- Form Group (login box)-->
+                                            <div class="d-flex align-items-center justify-content-between mb-0">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" id="checkRememberPassword" type="checkbox" value="" />
+                                                    <label class="form-check-label" for="checkRememberPassword">Remember password</label>
+                                                </div>
+                                                <a class="btn btn-primary" href="/dashboard/dashboard1">Login</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <hr class="my-0" />
+                                    <div class="card-body px-5 py-4">
+                                        <div class="small text-center">
+                                            New user?
+                                            <a href="/auth/auth-register-social">Create an account!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}
