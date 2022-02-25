@@ -583,7 +583,7 @@
             var dataPie = new int[] { 55, 30, 15 };
             await JS.InvokeVoidAsync("RenderPieChart", "myPieChart", labelsPie, dataPie);
             await JS.InvokeVoidAsync("DemoDataTable", "datatablesSimple");
-            
+             await JS.InvokeVoidAsync("LoadFeather");
         }
     }
 }
