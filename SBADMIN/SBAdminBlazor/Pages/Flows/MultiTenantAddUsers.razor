@@ -1,0 +1,58 @@
+﻿@layout NoAuthLayout
+@page "/flows/multi-tenant-add-users"
+@inject IJSRuntime JS
+
+<PageTitle>Multi Tenant Add Users</PageTitle>
+   
+<div class="container-xl px-4">
+                        <div class="row justify-content-center">
+                            <!-- Create Organization-->
+                            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
+                                <div class="card mt-5">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="icons-org-create align-items-center mx-auto">
+                                            <i class="icon-users" data-feather="users"></i>
+                                            <i class="icon-plus fas fa-plus"></i>
+                                        </div>
+                                        <div class="h3 text-primary">Who else is part of this organization?</div>
+                                    </div>
+                                    <hr class="m-0" />
+                                    <div class="card-body p-5">
+                                        <form>
+                                            <div class="mb-3"><input class="form-control form-control-solid" type="text" placeholder="name@example.com" aria-label="Add User" aria-describedby="addUser" /></div>
+                                            <div class="mb-3"><input class="form-control form-control-solid" type="text" placeholder="name@example.com" aria-label="Add User" aria-describedby="addUser" /></div>
+                                            <div class="mb-3"><input class="form-control form-control-solid" type="text" placeholder="name@example.com" aria-label="Add User" aria-describedby="addUser" /></div>
+                                            <div class="mb-3 text-end">
+                                                <button class="btn btn-link p-0">
+                                                    <i class="fas fa-plus-circle fa-sm me-1"></i>
+                                                    Add another
+                                                </button>
+                                            </div>
+                                            <div class="d-grid mb-3"><a class="btn btn-primary" href="/auth/auth-login-social">Add Members</a></div>
+                                            <div class="mb-3 mb-5">
+                                                <a class="d-flex align-items-center" href="#">
+                                                    <i class="me-1" data-feather="link"></i>
+                                                    Get an invite link to share
+                                                </a>
+                                            </div>
+                                            <div class="mb-0 text-center">
+                                                Or,
+                                                <a href="/auth/auth-login-social">skip for now</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+           
+            await JS.InvokeVoidAsync("LoadFeather");
+            
+        }
+    }
+}

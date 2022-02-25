@@ -1,0 +1,39 @@
+﻿@page "/header/header-overlap"
+@inject IJSRuntime JS
+
+<PageTitle>Header Content Overlap</PageTitle>  
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="layout"></i></div>
+                                            Overlap Header
+                                        </h1>
+                                        <div class="page-header-subtitle">The default page header layout with main content that overlaps the background of the page header</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                        <div class="card">
+                            <div class="card-header">Page Header Overlap</div>
+                            <div class="card-body">
+                                The page header by default uses the
+                                <code>.pb-10</code>
+                                spacing utility classes to add paddig to the bottom of the
+                                <code>.page-header</code>
+                                . Then, the first container within the
+                                <code>main</code>
+                                element uses the
+                                <code>.mt-n10</code>
+                                spacing utility to give the container an equivilant, negative top margin to create the overlap effect.
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}

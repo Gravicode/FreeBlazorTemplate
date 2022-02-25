@@ -1129,9 +1129,10 @@
             var labelsBar = new string[] { "January", "February", "March", "April", "May", "June" };
             var dataBar = new int[] { 4215, 5312, 6251, 7841, 9821, 14984 };
             await JS.InvokeVoidAsync("RenderBarChart", "myBarChart", labelsBar, dataBar);
-            await JS.InvokeVoidAsync("DemoDataTable","datatablesSimple");
+        
             await JS.InvokeVoidAsync("LoadLitePicker");
             await JS.InvokeVoidAsync("LoadFeather");
+            await JS.InvokeVoidAsync("DemoDataTable","datatablesSimple");
         }
     }
 }

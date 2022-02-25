@@ -1,4 +1,4 @@
-﻿<nav class="sidenav shadow-right sidenav-light">
+﻿<nav class="sidenav shadow-right @(IsDark ? "sidenav-dark":"sidenav-light")">
     <div class="sidenav-menu">
         <div class="nav accordion" id="accordionSidenav">
             <!-- Sidenav Menu Heading (Account)-->
@@ -172,7 +172,7 @@
             <div class="collapse" id="collapseFlows" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav">
                     <a class="nav-link" href="/flows/multi-tenant-select">Multi-Tenant Registration</a>
-                    <a class="nav-link" href="wizard.html">Wizard</a>
+                    <a class="nav-link" href="/flows/wizard">Wizard</a>
                 </nav>
             </div>
             <!-- Sidenav Heading (UI Toolkit)-->
@@ -192,9 +192,9 @@
                     </a>
                     <div class="collapse" id="collapseLayoutSidenavVariations" data-bs-parent="#accordionSidenavLayout">
                         <nav class="sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-static.html">Static Sidenav</a>
-                            <a class="nav-link" href="layout-dark.html">Dark Sidenav</a>
-                            <a class="nav-link" href="layout-rtl.html">RTL Layout</a>
+                            <a class="nav-link" href="/navigation/layout-static">Static Sidenav</a>
+                            <a class="nav-link" href="/navigation/layout-dark">Dark Sidenav</a>
+                            <a class="nav-link" href="/navigation/layout-rtl">RTL Layout</a>
                         </nav>
                     </div>
                     <!-- Nested Sidenav Accordion (Layout -> Container Options)-->
@@ -204,8 +204,8 @@
                     </a>
                     <div class="collapse" id="collapseLayoutContainers" data-bs-parent="#accordionSidenavLayout">
                         <nav class="sidenav-menu-nested nav">
-                            <a class="nav-link" href="layout-boxed.html">Boxed Layout</a>
-                            <a class="nav-link" href="layout-fluid.html">Fluid Layout</a>
+                            <a class="nav-link" href="/containeroptions/layout-boxed">Boxed Layout</a>
+                            <a class="nav-link" href="/containeroptions/layout-fluid">Fluid Layout</a>
                         </nav>
                     </div>
                     <!-- Nested Sidenav Accordion (Layout -> Page Headers)-->
@@ -215,11 +215,11 @@
                     </a>
                     <div class="collapse" id="collapseLayoutsPageHeaders" data-bs-parent="#accordionSidenavLayout">
                         <nav class="sidenav-menu-nested nav">
-                            <a class="nav-link" href="header-simplified.html">Simplified</a>
-                            <a class="nav-link" href="header-compact.html">Compact</a>
-                            <a class="nav-link" href="header-overlap.html">Content Overlap</a>
-                            <a class="nav-link" href="header-breadcrumbs.html">Breadcrumbs</a>
-                            <a class="nav-link" href="header-light.html">Light</a>
+                            <a class="nav-link" href="/header/header-simplified">Simplified</a>
+                            <a class="nav-link" href="/header/header-compact">Compact</a>
+                            <a class="nav-link" href="/header/header-overlap">Content Overlap</a>
+                            <a class="nav-link" href="/header/header-breadcrumbs">Breadcrumbs</a>
+                            <a class="nav-link" href="/header/header-light">Light</a>
                         </nav>
                     </div>
                     <!-- Nested Sidenav Accordion (Layout -> Starter Layouts)-->
@@ -229,8 +229,8 @@
                     </a>
                     <div class="collapse" id="collapseLayoutsStarterTemplates" data-bs-parent="#accordionSidenavLayout">
                         <nav class="sidenav-menu-nested nav">
-                            <a class="nav-link" href="starter-default.html">Default</a>
-                            <a class="nav-link" href="starter-minimal.html">Minimal</a>
+                            <a class="nav-link" href="/starter/starter-default">Default</a>
+                            <a class="nav-link" href="/starter/starter-minimal">Minimal</a>
                         </nav>
                     </div>
                 </nav>
@@ -243,11 +243,11 @@
             </a>
             <div class="collapse" id="collapseComponents" data-bs-parent="#accordionSidenav">
                 <nav class="sidenav-menu-nested nav">
-                    <a class="nav-link" href="alerts.html">Alerts</a>
-                    <a class="nav-link" href="avatars.html">Avatars</a>
-                    <a class="nav-link" href="badges.html">Badges</a>
-                    <a class="nav-link" href="buttons.html">Buttons</a>
-                    <a class="nav-link" href="cards.html">
+                    <a class="nav-link" href="/components/alerts">Alerts</a>
+                    <a class="nav-link" href="/components/avatars">Avatars</a>
+                    <a class="nav-link" href="/components/badges">Badges</a>
+                    <a class="nav-link" href="/components/buttons">Buttons</a>
+                    <a class="nav-link" href="/components/cards">
                         Cards
                         <span class="badge bg-primary-soft text-primary ms-auto">Updated</span>
                     </a>
@@ -284,12 +284,12 @@
             <!-- Sidenav Heading (Addons)-->
             <div class="sidenav-menu-heading">Plugins</div>
             <!-- Sidenav Link (Charts)-->
-            <a class="nav-link" href="charts.html">
+            <a class="nav-link" href="/plugins/charts">
                 <div class="nav-link-icon"><i data-feather="bar-chart"></i></div>
                 Charts
             </a>
             <!-- Sidenav Link (Tables)-->
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="/plugins/tables">
                 <div class="nav-link-icon"><i data-feather="filter"></i></div>
                 Tables
             </a>
@@ -304,5 +304,11 @@
     </div>
 </nav>
 @code {
+    [Parameter]
+    public bool IsDark { set; get; } = false;
 
-        }
+    protected override async Task OnInitializedAsync()
+    {
+       
+    }
+       }

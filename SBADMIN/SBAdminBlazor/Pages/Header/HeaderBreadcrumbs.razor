@@ -1,0 +1,35 @@
+﻿@page "/header/header-breadcrumbs"
+@inject IJSRuntime JS
+
+<PageTitle>Header Breadcrumbs</PageTitle>  
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="layout"></i></div>
+                                            Breadcrumbs
+                                        </h1>
+                                        <div class="page-header-subtitle">The custom page header supports and styles Bootstrap breadcrumbs</div>
+                                    </div>
+                                </div>
+                                <nav class="mt-4 rounded" aria-label="breadcrumb">
+                                    <ol class="breadcrumb px-3 py-2 rounded mb-0">
+                                        <li class="breadcrumb-item"><a href="dashboard-1.html">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Breadcrumbs</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                        <div class="card">
+                            <div class="card-header">Breadcrumbs Header</div>
+                            <div class="card-body">The Bootstrap breadcrumbs component is supported within the page header for the SB Admin Pro theme. The page header on this page is an example of a page with breadcrumbs added!</div>
+                        </div>
+                    </div>
+@code {
+
+}

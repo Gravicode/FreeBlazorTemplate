@@ -21,7 +21,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer bg-transparent px-5 py-4">
-                                        <div class="small text-center"><a class="btn btn-block btn-primary" href="multi-tenant-create.html">Create new organization</a></div>
+                                        <div class="small text-center"><a class="btn btn-block btn-primary" href="/flows/multi-tenant-create">Create new organization</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -40,12 +40,20 @@
                                         </div>
                                     </div>
                                     <div class="card-footer bg-transparent px-5 py-4">
-                                        <div class="small text-center"><a class="btn btn-block btn-secondary" href="multi-tenant-join.html">Join an organization</a></div>
+                                        <div class="small text-center"><a class="btn btn-block btn-secondary" href="/flows/multi-tenant-join">Join an organization</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 @code {
-
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+           
+            await JS.InvokeVoidAsync("LoadFeather");
+            
+        }
+    }
 }

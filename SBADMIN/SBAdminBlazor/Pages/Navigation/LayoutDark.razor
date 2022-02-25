@@ -1,0 +1,39 @@
+﻿@page "/navigation/layout-dark"
+@layout MainLayoutDarkMenu
+@inject IJSRuntime JS
+
+<PageTitle>Dark Layout</PageTitle>    
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="layout"></i></div>
+                                            Dark Sidenav
+                                        </h1>
+                                        <div class="page-header-subtitle">An alternate option for the sidenav styling</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                        <div class="card">
+                            <div class="card-header">Dark Sidenav Option</div>
+                            <div class="card-body">
+                                Use the
+                                <code>.sidenav-dark</code>
+                                with the
+                                <code>.sidenav</code>
+                                for a darker layout for the side navigation element. The text, icons, and all of the elements within the side navigation will adapt to work well with darker backgrounds. You can also use utility classes to modify the background color of the side navigation, or use a custom style!
+                            </div>
+                        </div>
+                    </div>
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        
+    }
+}

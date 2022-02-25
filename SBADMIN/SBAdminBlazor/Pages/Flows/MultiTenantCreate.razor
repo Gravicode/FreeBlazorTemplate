@@ -1,0 +1,40 @@
+﻿@layout NoAuthLayout
+@page "/flows/multi-tenant-create"
+@inject IJSRuntime JS
+
+<PageTitle>Multi Tenant Create</PageTitle>
+ 
+<div class="container-xl px-4">
+                        <div class="row justify-content-center">
+                            <!-- Create Organization-->
+                            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-11">
+                                <div class="card mt-5">
+                                    <div class="card-body p-5 text-center">
+                                        <div class="icons-org-create align-items-center mx-auto">
+                                            <i class="icon-users" data-feather="users"></i>
+                                            <i class="icon-plus fas fa-plus"></i>
+                                        </div>
+                                        <div class="h3 text-primary mb-0">Create an Organization</div>
+                                    </div>
+                                    <hr class="m-0" />
+                                    <div class="card-body p-5">
+                                        <form>
+                                            <div class="mb-3"><input class="form-control form-control-solid" type="text" placeholder="Enter new organization name" aria-label="Organization Name" aria-describedby="orgNameExample" /></div>
+                                            <div class="d-grid"><a class="btn btn-primary" href="/flows/multi-tenant-add-users">Create organization</a></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+           
+            await JS.InvokeVoidAsync("LoadFeather");
+            
+        }
+    }
+}

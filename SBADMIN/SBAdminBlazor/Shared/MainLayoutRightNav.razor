@@ -1,12 +1,9 @@
 ﻿@inherits LayoutComponentBase
 
 <PageTitle>SB Admin Blazor</PageTitle>
-<div class="nav-fixed">
+<div class="layout-rtl nav-fixed">
     <TopNavBar></TopNavBar>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <SideMenu></SideMenu>
-        </div>
+    <div id="layoutSidenav">        
         <div id="layoutSidenav_content">
             <main>
                 @Body
@@ -23,6 +20,9 @@
                     </div>
                 </div>
             </footer>
+        </div>
+        <div id="layoutSidenav_nav">
+            <SideMenu></SideMenu>
         </div>
     </div>
 </div>

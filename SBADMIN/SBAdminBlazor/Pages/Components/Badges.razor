@@ -1,0 +1,289 @@
+﻿@page "/components/badges"
+@inject IJSRuntime JS
+
+<PageTitle>Badges</PageTitle>
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="award"></i></div>
+                                            Badges
+                                        </h1>
+                                        <div class="page-header-subtitle">Add contextual labels to text within your project</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <!-- Default Bootstrap Badges-->
+                                <div id="default">
+                                    <div class="card mb-4">
+                                        <div class="card-header">Default Bootstrap Badges</div>
+                                        <div class="card-body">
+                                            <!-- Component Preview-->
+                                            <div class="sbp-preview">
+                                                <div class="sbp-preview-content">
+                                                    <span class="badge bg-primary text-white me-2">Primary</span>
+                                                    <span class="badge bg-secondary text-white me-2">Secondary</span>
+                                                    <span class="badge bg-success me-2">Success</span>
+                                                    <span class="badge bg-danger me-2">Danger</span>
+                                                    <span class="badge bg-warning me-2">Warning</span>
+                                                    <span class="badge bg-info me-2">Info</span>
+                                                    <span class="badge bg-light text-body me-2">Light</span>
+                                                    <span class="badge bg-dark me-2">Dark</span>
+                                                </div>
+                                                <div class="sbp-preview-code">
+                                                    <!-- Code sample-->
+                                                    <ul class="nav nav-tabs" id="badgeDefaultTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active me-1" id="badgeDefaultHtmlTab" data-bs-toggle="tab" href="#badgeDefaultHtml" role="tab" aria-controls="badgeDefaultHtml" aria-selected="true">
+                                                                <i class="fab fa-html5 text-orange me-1"></i>
+                                                                HTML
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="badgeDefaultPugTab" data-bs-toggle="tab" href="#badgeDefaultPug" role="tab" aria-controls="badgeDefaultPug" aria-selected="false">
+                                                                <img class="img-pug me-1" src="assets/img/demo/pug.svg" />
+                                                                PUG
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Tab panes-->
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="badgeDefaultHtml" role="tabpanel" aria-labelledby="badgeDefaultHtmlTab">
+                                                            <pre class="language-markup"><code>@(@"<script type=""text/plain""><span class=""badge badge-primary"">Primary</span>
+<span class=""badge badge-secondary"">Secondary</span>
+<span class=""badge badge-success"">Success</span>
+<span class=""badge badge-danger"">Danger</span>
+<span class=""badge badge-warning"">Warning</span>
+<span class=""badge badge-info"">Info</span>
+<span class=""badge badge-light text-body"">Light</span>
+<span class=""badge badge-dark"">Dark</span></script>")</code></pre>
+                                                        </div>
+                                                        <div class="tab-pane" id="badgeDefaultPug" role="tabpanel" aria-labelledby="badgeDefaultPugTab">
+                                                            <pre class="language-pug"><code>span.badge.bg-primary.text-white.me-2 Primary
+span.badge.bg-secondary.text-white.me-2 Secondary
+span.badge.bg-success.me-2 Success
+span.badge.bg-danger.me-2 Danger
+span.badge.bg-warning.me-2 Warning
+span.badge.bg-info.me-2 Info
+span.badge.bg-light.text-body.me-2 Light
+span.badge.bg-dark.me-2 Dark</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sbp-preview-text">By default, Bootstrap includes the above badges. The styling for these default badges has been modified to fit the SB Admin Pro theme.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Extended Badges-->
+                                <div id="extended">
+                                    <div class="card mb-4">
+                                        <div class="card-header">Extended Badges</div>
+                                        <div class="card-body">
+                                            <!-- Component Preview-->
+                                            <div class="sbp-preview">
+                                                <div class="sbp-preview-content">
+                                                    <span class="badge bg-red me-2">Red</span>
+                                                    <span class="badge bg-orange me-2">Orange</span>
+                                                    <span class="badge bg-yellow me-2">Yellow</span>
+                                                    <span class="badge bg-green me-2">Green</span>
+                                                    <span class="badge bg-teal me-2">Teal</span>
+                                                    <span class="badge bg-cyan me-2">Cyan</span>
+                                                    <span class="badge bg-blue me-2">Blue</span>
+                                                    <span class="badge bg-indigo me-2">Indigo</span>
+                                                    <span class="badge bg-purple me-2">Purple</span>
+                                                    <span class="badge bg-pink me-2">Pink</span>
+                                                </div>
+                                                <div class="sbp-preview-code">
+                                                    <!-- Code sample-->
+                                                    <ul class="nav nav-tabs" id="badgeExtendedTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active me-1" id="badgeExtendedHtmlTab" data-bs-toggle="tab" href="#badgeExtendedHtml" role="tab" aria-controls="badgeExtendedHtml" aria-selected="true">
+                                                                <i class="fab fa-html5 text-orange me-1"></i>
+                                                                HTML
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="badgeExtendedPugTab" data-bs-toggle="tab" href="#badgeExtendedPug" role="tab" aria-controls="badgeExtendedPug" aria-selected="false">
+                                                                <img class="img-pug me-1" src="assets/img/demo/pug.svg" />
+                                                                PUG
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Tab panes-->
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="badgeExtendedHtml" role="tabpanel" aria-labelledby="badgeExtendedHtmlTab">
+                                                            <pre class="language-markup"><code>@(@"<script type=""text/plain""><span class=""badge badge-red"">Red</span>
+<span class=""badge badge-orange"">Orange</span>
+<span class=""badge badge-yellow"">Yellow</span>
+<span class=""badge badge-green"">Green</span>
+<span class=""badge badge-teal"">Teal</span>
+<span class=""badge badge-cyan"">Cyan</span>
+<span class=""badge badge-blue"">Blue</span>
+<span class=""badge badge-indigo"">Indigo</span>
+<span class=""badge badge-purple"">Purple</span>
+<span class=""badge badge-pink"">Pink</span></script>")</code></pre>
+                                                        </div>
+                                                        <div class="tab-pane" id="badgeExtendedPug" role="tabpanel" aria-labelledby="badgeExtendedPugTab">
+                                                            <pre class="language-pug"><code>span.badge.bg-red Red
+span.badge.bg-orange Orange
+span.badge.bg-yellow Yellow
+span.badge.bg-green Green
+span.badge.bg-teal Teal
+span.badge.bg-cyan Cyan
+span.badge.bg-blue Blue
+span.badge.bg-indigo Indigo
+span.badge.bg-purple Purple
+span.badge.bg-pink Pink</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sbp-preview-text">The above non-contextual badge styles are custom made for the SB Admin Pro theme!</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Badge Sizing-->
+                                <div id="sizing">
+                                    <div class="card mb-4">
+                                        <div class="card-header">Badge Sizing</div>
+                                        <div class="card-body">
+                                            <!-- Component Preview-->
+                                            <div class="sbp-preview">
+                                                <div class="sbp-preview-content">
+                                                    <h1>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h1>
+                                                    <h2>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h2>
+                                                    <h3>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h3>
+                                                    <h4>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h4>
+                                                    <h5>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h5>
+                                                    <h6>
+                                                        Example Heading
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </h6>
+                                                    <p>
+                                                        This is an example paragraph with a badge at the end!
+                                                        <span class="badge bg-primary text-white ms-2">New</span>
+                                                    </p>
+                                                    <button class="btn btn-primary me-2">
+                                                        Messages
+                                                        <span class="badge bg-white text-dark ms-2">5</span>
+                                                    </button>
+                                                    <button class="btn btn-secondary me-2">
+                                                        Notifications
+                                                        <span class="badge bg-white text-dark ms-2">3</span>
+                                                    </button>
+                                                    <button class="btn btn-warning">
+                                                        Alerts
+                                                        <span class="badge bg-white text-dark ms-2">7</span>
+                                                    </button>
+                                                </div>
+                                                <div class="sbp-preview-code">
+                                                    <!-- Code sample-->
+                                                    <ul class="nav nav-tabs" id="badgeSizingTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active me-1" id="badgeSizingHtmlTab" data-bs-toggle="tab" href="#badgeSizingHtml" role="tab" aria-controls="badgeSizingHtml" aria-selected="true">
+                                                                <i class="fab fa-html5 text-orange me-1"></i>
+                                                                HTML
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="badgeSizingPugTab" data-bs-toggle="tab" href="#badgeSizingPug" role="tab" aria-controls="badgeSizingPug" aria-selected="false">
+                                                                <img class="img-pug me-1" src="assets/img/demo/pug.svg" />
+                                                                PUG
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Tab panes-->
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="badgeSizingHtml" role="tabpanel" aria-labelledby="badgeSizingHtmlTab">
+                                                            <pre class="language-markup"><code>@(@"<script type=""text/plain""><h1>Example Heading <span class=""badge badge-primary"">New</span></h1>
+<h2>Example Heading <span class=""badge badge-primary"">New</span></h2>
+<h3>Example Heading <span class=""badge badge-primary"">New</span></h3>
+<h4>Example Heading <span class=""badge badge-primary"">New</span></h4>
+<h5>Example Heading <span class=""badge badge-primary"">New</span></h5>
+<h6>Example Heading <span class=""badge badge-primary"">New</span></h6>
+
+<p>This is an example paragraph with a badge at the end! <span class=""badge badge-primary"">New</span></p>
+
+<button class=""btn btn-primary"">Messages <span class=""badge bg-white text-dark"">5</span></button>
+
+<button class=""btn btn-secondary"">Notifications <span class=""badge bg-white text-dark"">3</span></button>
+
+<button class=""btn btn-warning"">Alerts <span class=""badge bg-white text-dark"">7</span></button></script>")</code></pre>
+                                                        </div>
+                                                        <div class="tab-pane" id="badgeSizingPug" role="tabpanel" aria-labelledby="badgeSizingPugTab">
+                                                            <pre class="language-pug"><code>h1 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+h2 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+h3 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+h4 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+h5 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+h6 Example Heading
+    span.badge.bg-primary.text-white.ms-2 New
+p This is an example paragraph with a badge at the end!
+    span.badge.bg-primary.text-white.ms-2 New
+button.btn.btn-primary.me-2 Messages
+    span.badge.bg-white.text-dark.ms-2 5
+button.btn.btn-secondary.me-2 Notifications
+    span.badge.bg-white.text-dark.ms-2 3
+button.btn.btn-warning Alerts
+    span.badge.bg-white.text-dark.ms-2 7</code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sbp-preview-text">
+                                                    Badge sizing is set using
+                                                    <code>em</code>
+                                                    units, which means they will adapt to the font size of their immediate parent. The above examples show the badge size adapting to the parent, including the badge used within the button element.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sticky Navigation-->
+                            <div class="col-lg-3">
+                                <div class="nav-sticky">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <ul class="nav flex-column" id="stickyNav">
+                                                <li class="nav-item"><a class="nav-link" href="#default">Default</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#extended">Extended</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#sizing">Sizing</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}

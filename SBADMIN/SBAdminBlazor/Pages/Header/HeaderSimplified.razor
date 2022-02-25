@@ -1,0 +1,36 @@
+﻿@page "/header/header-simplified"
+@inject IJSRuntime JS
+
+<PageTitle>Header Simplified</PageTitle>
+    
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary mb-4">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="file"></i></div>
+                                            Simplified Header
+                                        </h1>
+                                        <div class="page-header-subtitle">A simplified page header for use with the dashboard layout</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4">
+                        <div class="card">
+                            <div class="card-header">Simplified Page Header Option</div>
+                            <div class="card-body">
+                                The simplified page header options allows you to remove the negative offset of the default page header. Just remove the negative margin from the
+                                <code>.page-header</code>
+                                element and add a top margin to the initial container within the
+                                <code>main</code>
+                                element. This will result in a simplified page header, that still includes the option for an icon and breadcrumbs.
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}

@@ -1,0 +1,222 @@
+﻿@page "/components/avatars"
+@inject IJSRuntime JS
+
+<PageTitle>Avatars</PageTitle>  
+<header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="users"></i></div>
+                                            Avatars
+                                        </h1>
+                                        <div class="page-header-subtitle">Create single and group avatars of different sizes with this custom component.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-n10">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <!-- Avatar Sizing-->
+                                <div id="sizing">
+                                    <div class="card mb-4">
+                                        <div class="card-header">Avatar Sizing</div>
+                                        <div class="card-body">
+                                            <!-- Component Preview-->
+                                            <div class="sbp-preview">
+                                                <div class="sbp-preview-content d-flex align-items-center">
+                                                    <div class="avatar avatar-xxl me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-xl me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-lg me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-sm me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-xs"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                </div>
+                                                <div class="sbp-preview-code">
+                                                    <!-- Code sample-->
+                                                    <ul class="nav nav-tabs" id="avatarSizesTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active me-1" id="avatarSizesHtmlTab" data-bs-toggle="tab" href="#avatarSizesHtml" role="tab" aria-controls="avatarSizesHtml" aria-selected="true">
+                                                                <i class="fab fa-html5 text-orange me-1"></i>
+                                                                HTML
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="avatarSizesPugTab" data-bs-toggle="tab" href="#avatarSizesPug" role="tab" aria-controls="avatarSizesPug" aria-selected="false">
+                                                                <img class="img-pug me-1" src="assets/img/demo/pug.svg" />
+                                                                PUG
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Tab panes-->
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="avatarSizesHtml" role="tabpanel" aria-labelledby="avatarSizesHtmlTab">
+                                                            <pre class="language-markup"><code>@(@"<script type=""text/plain""><!-- XXL Avatar -->
+<div class=""avatar avatar-xxl"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Extra Large Avatar -->
+<div class=""avatar avatar-xl"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Large Avatar -->
+<div class=""avatar avatar-lg"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Default Avatar -->
+<div class=""avatar"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Small Avatar -->
+<div class=""avatar avatar-sm"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Extra Small Avatar -->
+<div class=""avatar avatar-xs"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div></script>")</code></pre>
+                                                        </div>
+                                                        <div class="tab-pane" id="avatarSizesPug" role="tabpanel" aria-labelledby="avatarSizesPugTab">
+                                                            <pre class="language-pug"><code>//- XXL Avatar
+.avatar.avatar-xxl
+    img.avatar-img.img-fluid(src='path/to/image')    
+
+//- Extra Large Avatar
+.avatar.avatar-xl
+    img.avatar-img.img-fluid(src='path/to/image')    
+
+//- Large Avatar
+.avatar.avatar-lg
+    img.avatar-img.img-fluid(src='path/to/image')    
+
+//- Default Avatar
+.avatar
+    img.avatar-img.img-fluid(src='path/to/image')    
+
+//- Small Avatar
+.avatar.avatar-sm
+    img.avatar-img.img-fluid(src='path/to/image')    
+
+//- Extra Small Avatar
+.avatar.avatar-xs
+    img.avatar-img.img-fluid(src='path/to/image')    </code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sbp-preview-text">
+                                                    Square images work best when using the
+                                                    <code>.avatar</code>
+                                                    component. Using an image double the resoulution of the avatar size can improve image quality on high resoulution screens.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Avatar Status Indicators-->
+                                <div id="status">
+                                    <div class="card mb-4">
+                                        <div class="card-header">Avatar Status Inidicators</div>
+                                        <div class="card-body">
+                                            <!-- Component Preview-->
+                                            <div class="sbp-preview">
+                                                <div class="sbp-preview-content d-flex align-items-center">
+                                                    <div class="avatar avatar-offline avatar-xxl me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-idle avatar-xl me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-online avatar-lg me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                    <div class="avatar avatar-busy me-1"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></div>
+                                                </div>
+                                                <div class="sbp-preview-code">
+                                                    <!-- Code sample-->
+                                                    <ul class="nav nav-tabs" id="avatarIndicatorsTabs" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active me-1" id="avatarIndicatorsHtmlTab" data-bs-toggle="tab" href="#avatarIndicatorsHtml" role="tab" aria-controls="avatarIndicatorsHtml" aria-selected="true">
+                                                                <i class="fab fa-html5 text-orange me-1"></i>
+                                                                HTML
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="avatarIndicatorsPugTab" data-bs-toggle="tab" href="#avatarIndicatorsPug" role="tab" aria-controls="avatarIndicatorsPug" aria-selected="false">
+                                                                <img class="img-pug me-1" src="assets/img/demo/pug.svg" />
+                                                                PUG
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <!-- Tab panes-->
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active" id="avatarIndicatorsHtml" role="tabpanel" aria-labelledby="avatarIndicatorsHtmlTab">
+                                                            <pre class="language-markup"><code>@(@"<script type=""text/plain""><!-- Offline Indicator -->
+<div class=""avatar avatar-offline avatar-xxl mr-1"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Idle Indicator -->
+<div class=""avatar avatar-idle avatar-xl mr-1"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Online Indicator -->
+<div class=""avatar avatar-online avatar-lg mr-1"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div>
+
+<!-- Busy Indicator -->
+<div class=""avatar avatar-busy mr-1"">
+    <img class=""avatar-img img-fluid"" src=""path/to/image"">
+</div></script>")</code></pre>
+                                                        </div>
+                                                        <div class="tab-pane" id="avatarIndicatorsPug" role="tabpanel" aria-labelledby="avatarIndicatorsPugTab">
+                                                            <pre class="language-pug"><code>//- Offline Indicator
+.avatar.avatar-offline.avatar-xxl
+    img.avatar-img.img-fluid(src='path/to/image')
+
+//- Idle Indicator
+.avatar.avatar-idle.avatar-xl
+    img.avatar-img.img-fluid(src='path/to/image')
+
+//- Online Indicator    
+.avatar.avatar-online.avatar-lg
+    img.avatar-img.img-fluid(src='path/to/image')
+
+//- Busy Indicator
+.avatar.avatar-busy
+    img.avatar-img.img-fluid(src='path/to/image')  </code></pre>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sbp-preview-text">
+                                                    Use one of the four status indicator options shown above by appending the class to your
+                                                    <code>.avatar</code>
+                                                    component. The indicator is supported on all sizes of the avatar component.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sticky Navigation-->
+                            <div class="col-lg-3">
+                                <div class="nav-sticky">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <ul class="nav flex-column" id="stickyNav">
+                                                <li class="nav-item"><a class="nav-link" href="#sizing">Sizing</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#status">Status Indicators</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}

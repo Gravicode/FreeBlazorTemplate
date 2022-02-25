@@ -1,0 +1,37 @@
+﻿@page "/header/header-light"
+@inject IJSRuntime JS
+
+<PageTitle>Header Light</PageTitle>   
+<header class="page-header page-header-light bg-light mb-0">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content pt-4">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto mt-4">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="layout"></i></div>
+                                            Light Header
+                                        </h1>
+                                        <div class="page-header-subtitle">A light page header option is also available for a different page style</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4">
+                        <div class="card">
+                            <div class="card-header">Light Header</div>
+                            <div class="card-body">
+                                This page uses the
+                                <code>.page-header-light</code>
+                                styling along with a
+                                <code>.bg-white</code>
+                                and a
+                                <code>.shadow</code>
+                                utility class added to create some depth between the header and the main page content. This example page also uses the simplified page header option with breadcrumbs in order to showcase the styling options. Use these options whenever the background color of the page header requires the use of darker text.
+                            </div>
+                        </div>
+                    </div>
+@code {
+
+}
